@@ -111,8 +111,8 @@ public class FlutterPcmSoundPlugin implements
                     if (Build.VERSION.SDK_INT >= 23) { // Android 6 (Marshmallow) and above
                         mAudioTrack = new AudioTrack.Builder()
                             .setAudioAttributes(new AudioAttributes.Builder()
-                                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_VOICE_COMMUNICATION)
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
                                     .build())
                             .setAudioFormat(new AudioFormat.Builder()
                                     .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
